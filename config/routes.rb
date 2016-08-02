@@ -1,7 +1,10 @@
 Rails.application.routes.draw do
+  get 'ideas/index'
+
   root 'users#index'
   post 'users' => "users#create"
-  post 'sessions' => "sessions#login"
+  post 'sessions' => "sessions#create"
+  get 'ideas' => "ideas#index"
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
