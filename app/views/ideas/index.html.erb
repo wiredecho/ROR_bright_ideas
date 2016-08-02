@@ -1,2 +1,17 @@
 <h1>Welcome <%= @user.name %></h1>
 <a href="/sessions" data-method="delete">Logout</a>
+
+<div class="container users">
+	<div class="row">
+		<div id="registration" class="col-md-6">
+			<h3>Submit Your Idea</h3>
+			<form action="/ideas" method="post">
+				<input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+				<div class="form-group">
+					<label for="content">Idea: </label><br/>
+					<textarea rows="4" cols="50" class="form-control" id="name" name=idea[content]></textarea>
+				</div>
+				
+				<button type="submit" value="Register" class="btn btn-info">Submit</button>
+			</form>
+		</div>
