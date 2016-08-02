@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   post 'users' => "users#create"
   post 'sessions' => "sessions#create"
   get 'ideas' => "ideas#index"
+  delete 'sessions' => 'sessions#destroy' 
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

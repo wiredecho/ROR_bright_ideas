@@ -6,12 +6,14 @@ class SessionsController < ApplicationController
 			redirect_to ideas_path
 		else
 			flash[:errors] = ["Wrong combination"]
-			redirect_to back
+			redirect_to :back
 
 		end
 	end
 
 	def destroy
+		reset_session
+		redirect_to :root
 	end
 
 end
