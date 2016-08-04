@@ -1,6 +1,8 @@
 class IdeasController < ApplicationController
   def index
   	@user = User.find(session[:user_id])
+  	@ideas = User.join_ideas.sort_by{|m| -m[:created_at]}
+
   end
 
   def create
@@ -17,5 +19,5 @@ class IdeasController < ApplicationController
   def idea_params
   	params.require(:idea).permit(:content)
   end
-  
+
 end

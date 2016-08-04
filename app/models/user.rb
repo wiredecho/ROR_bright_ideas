@@ -12,4 +12,9 @@ class User < ActiveRecord::Base
   		self.email.downcase!
   		
   	end
+
+  	def self.join_ideas
+  		self.joins(:ideas).select(:id, :alias, :user_id, :content)
+  	end
+  	
 end

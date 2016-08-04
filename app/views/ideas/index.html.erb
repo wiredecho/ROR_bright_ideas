@@ -12,6 +12,16 @@
 					<textarea rows="4" cols="50" class="form-control" id="name" name=idea[content]></textarea>
 				</div>
 				
-				<button type="submit" value="Register" class="btn btn-info">Submit</button>
+				<button type="submit" value="Create Idea" class="btn btn-info">Submit</button>
 			</form>
 		</div>
+	</div>
+
+
+
+	<%  @ideas.each do |i| %>
+		<div>
+			<h3><%= i.alias %></h3>
+			<h5><%= i.content %></h5>
+		</div>
+	<%end%>
