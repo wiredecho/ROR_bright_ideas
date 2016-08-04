@@ -1,8 +1,8 @@
 class IdeasController < ApplicationController
   def index
   	@user = User.find(session[:user_id])
-  	@ideas = User.join_ideas.sort_by{|m| -m[:created_at]}
-
+  	@ideas = User.join_ideas.sort_by{|m| -m[:id]}
+   
   end
 
   def create
