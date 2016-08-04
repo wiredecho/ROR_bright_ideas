@@ -1,6 +1,6 @@
 <div class="container users">
 	<div class="row">
-		<div id="registration" class="col-md-6">
+		<div id="registration" class="col s6">
 			<h1>Register</h1>
 			<form action="/users" method="post">
 				<input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
@@ -29,7 +29,7 @@
 		</div>
 
 
-		<div id="login" class="col-md-6">
+		<div id="login" class="col s6">
 			<h1>Login</h1>
 			<form action="/sessions" method="POST">
 			<input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
