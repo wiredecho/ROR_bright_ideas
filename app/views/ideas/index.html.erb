@@ -23,5 +23,10 @@
 		<div>
 			<h3><a href="/users/"><%= i.alias %></a></h3>
 			<h5><%= i.content %></h5>
+			<div>
+				<p><a href="/likes"></a></p>
+				<p><a href="/ideas/<%= i %>"><%= i.vote %></a> Likes</p>
+			</div>
+			<p><a href="/likes">Like</a></p>
 		</div>
 	<%end%>

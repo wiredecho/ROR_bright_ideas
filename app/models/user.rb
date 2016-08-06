@@ -13,12 +13,9 @@ class User < ActiveRecord::Base
   		
   	end
 
-  	def self.join_ideas
-  		self.joins(:ideas).select(:id, :alias, :user_id, :content)
-  	end
   	
     def hello
       puts "hello"
     end
-    
+
 end
