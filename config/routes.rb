@@ -1,12 +1,15 @@
 Rails.application.routes.draw do
 
   root 'users#index'
-  
+
   post 'users' => "users#create"
-  post 'sessions' => "sessions#create"
+
   get 'ideas' => "ideas#index"
   post "ideas" => "ideas#create"
-  delete 'sessions' => 'sessions#destroy' 
+
+  post 'sessions' => "sessions#create"
+  delete 'sessions' => 'sessions#destroy'
+   
   post "likes/:id" => "likes#create"
   
 

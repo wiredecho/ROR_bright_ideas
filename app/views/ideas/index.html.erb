@@ -22,7 +22,7 @@
 	<%  @ideas.each do |i| %>
 		<div>
 			<h3><a href="/users/"><%= i.alias %></a></h3>
-			<h5><%= i.content %></h5>
+			<h6><%= i.content %></h6>
 			<div>
 				<p><a href="/likes/<%= i.id %>" data-method="post">Like</a></p>
 				<p><a href="/ideas/<%= i %>"><%= i.vote %></a> Likes</p>
