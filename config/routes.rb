@@ -6,10 +6,11 @@ Rails.application.routes.draw do
 
   get 'ideas' => "ideas#index"
   post "ideas" => "ideas#create"
+  delete "ideas/:id" => "ideas#destroy"
 
   post 'sessions' => "sessions#create"
   delete 'sessions' => 'sessions#destroy'
-   
+
   post "likes/:id" => "likes#create"
   
 

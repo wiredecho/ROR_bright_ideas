@@ -27,6 +27,11 @@
 				<p><a href="/likes/<%= i.id %>" data-method="post">Like</a></p>
 				<p><a href="/ideas/<%= i %>"><%= i.vote %></a> Likes</p>
 			</div>
+			<% if i.user_id == current_user.id %>
+				<button><a href="/ideas/<%= i.id %>" data-method="delete">Delete Idea</a></button>
+			<% end %>
 		
 		</div>
+		<hr/>
 	<%end%>
+</div>
